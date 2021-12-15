@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>i love my guga</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+    <header id="header">
+      <a href="#" class="logo">Welcome to my Space</a>
+      <ul>
+        <li><a href="#" class="active">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Destination</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </header>
+    <section>
+      <h2 id="text">
+        <span>This is</span><br />
+        TRISHUL NAYAK
+      </h2>
+      <img src="images/bird1.png" id="bird1" />
+      <img src="images/bird2.png" id="bird2" />
+      <img src="images/forest.png" id="forest" />
+      <a href="#" id="btn">Explore</a>
+
+      <img src="images/rocks.png" id="rocks" />
+      <img src="images/water.png" id="water" />
+    </section>
+    <div class="sec">
+      <h2>
+        A front end web developer, have keen interest in cybersecurity,and
+        networking Currently learning python for ML.
+      </h2>
+      <p></p>
+    </div>
+
+    <script>
+      let text = document.getElementById("text");
+      let bird1 = document.getElementById("bird1");
+      let bird2 = document.getElementById("bird2");
+      let btn = document.getElementById("btn");
+      let forest = document.getElementById("forest");
+      let rocks = document.getElementById("rocks");
+      let water = document.getElementById("water");
+      let header = document.getElementById("header");
+
+      window.addEventListener("scroll", function () {
+        let value = window.scrollY;
+
+        text.style.top = 50 + value * -0.5 + "%";
+        bird1.style.top = value * -1.5 + "px";
+        bird1.style.left = value * 2 + "px";
+        bird2.style.top = value * -1.5 + "px";
+        bird2.style.left = value * -5 + "px";
+        btn.style.margintop = value * 1.5 + "px";
+        rocks.style.top = value * -0.12 + "px";
+        forest.style.top = value * 0.25 + "px";
+        header.style.top = value * 0.5 + "px";
+      });
+    </script>
+  </body>
+</html>
